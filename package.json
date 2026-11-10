@@ -1,0 +1,19 @@
+{
+  "name": "tiktok-live-boss-battle",
+  "version": "1.0.0",
+  "description": "Interactive TikTok Live boss battle overlay driven by likes and gifts",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "demo": "SIM_AUTO=1 node server/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "tiktok-live-connector": "^2.5.0",
+    "ws": "^8.22.2"
+  }
+}

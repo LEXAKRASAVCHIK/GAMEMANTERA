@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Celestial Colosseum · TikTok Live Boss Battle</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #07061f; overflow: hidden; }
+    canvas { display: block; width: 100vw; height: 100vh; }
+    #debug {
+      position: fixed; left: 50%; bottom: 10px; transform: translateX(-50%);
+      display: none; flex-wrap: wrap; gap: 6px; justify-content: center; max-width: 96vw;
+      padding: 8px; border-radius: 10px; background: rgba(10, 8, 30, 0.75);
+      font: 13px system-ui, sans-serif;
+    }
+    #debug button {
+      padding: 6px 10px; border: 1px solid #5b4fa8; border-radius: 6px;
+      background: #241d52; color: #e9e4ff; cursor: pointer;
+    }
+    #debug button:hover { background: #352b78; }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="debug">
+    <button data-sim='{"type":"like","count":1}'>1 like</button>
+    <button data-sim='{"type":"like","count":15}'>15 likes</button>
+    <button data-spam>Like spam: off</button>
+    <button data-sim='{"type":"gift","coins":1,"name":"Rose"}'>Rose (buff)</button>
+    <button data-sim='{"type":"gift","coins":5,"name":"Finger Heart"}'>5 coins</button>
+    <button data-sim='{"type":"gift","coins":10,"name":"Rosa"}'>10 coins</button>
+    <button data-sim='{"type":"gift","coins":99,"name":"Confetti"}'>99 coins</button>
+    <button data-sim='{"type":"gift","coins":1000,"name":"Galaxy"}'>1000 coins</button>
+    <button data-sim='{"type":"level","level":6}'>Lv 6</button>
+    <button data-sim='{"type":"level","level":16}'>Lv 16</button>
+    <button data-sim='{"type":"level","level":31}'>Lv 31</button>
+    <button data-sim='{"type":"reset"}'>Reset</button>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
